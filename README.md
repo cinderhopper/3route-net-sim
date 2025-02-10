@@ -1,4 +1,4 @@
-![topology](PacketTracer_ETC8RTlAuy.png)
+![topology](PacketTracer_ETC8RTlAuy.png)  
 Feladat:
 1) Adj IP címeket az eszközeidnek 
 2) Alapkonfig minden hálózati eszközre! 
@@ -147,7 +147,7 @@ exit
 write memory  
 
 🔹 **R3-on**  
-enable
+enable  
 configure terminal  
 ip route 192.168.2.0 255.255.255.0 10.10.20.1  
 ip route 192.168.1.0 255.255.255.0 10.10.20.1  
