@@ -1,4 +1,4 @@
-![[PacketTracer_ETC8RTlAuy.png]]
+!![topology](PacketTracer_ETC8RTlAuy.png)
 Feladat:
 1) Adj IP címeket az eszközeidnek 
 2) Alapkonfig minden hálózati eszközre! 
@@ -33,6 +33,7 @@ Feladat:
 | Router2 | Serial0/0/1        | 10.10.20.1    | -                      |
 | Router3 | GigabitEthernet0/1 | 192.168.3.1   | -                      |
 | Router3 | Serial0/0/1        | 10.10.20.2    | -                      |
+
 **PC-k konfigurálása** (Minden PC-n, a megfelelő adatokkal):
 IP Address: 192.168.X.Y 
 Subnet Mask: 255.255.255.0 
