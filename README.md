@@ -168,9 +168,9 @@ write memory
 
 ## **5) Tesztelés**
 
-🔹 **Pingelj egy másik alhálózatból lévő PC-t:**
-🔹 **Pingelj egy routert vagy egy switch VLAN1 interfészét:**
-🔹 **Teszteld a Telnetet egy PC-ről:**
+🔹 **Pingelj egy másik alhálózatból lévő PC-t:**  
+🔹 **Pingelj egy routert vagy egy switch VLAN1 interfészét:**  
+🔹 **Teszteld a Telnetet egy PC-ről:**  
 telnet 192.168.1.1  (Router R1)  
 telnet 192.168.1.100 (Switch S1)  
 
