@@ -130,7 +130,7 @@ exit
 write memory  
 
 ## **3) Statikus útvonalak beállítása**
-🔹 **R1-en**
+🔹 **R1-en**  
 enable  
 configure terminal  
 ip route 192.168.2.0 255.255.255.0 10.10.10.2  
@@ -139,13 +139,15 @@ exit
 write memory  
 
 🔹 **R2-n**  
+enable  
 configure terminal  
 ip route 192.168.1.0 255.255.255.0 10.10.10.1  
 ip route 192.168.3.0 255.255.255.0 10.10.20.2  
 exit  
 write memory  
 
-🔹 **R3-on**
+🔹 **R3-on**  
+enable
 configure terminal  
 ip route 192.168.2.0 255.255.255.0 10.10.20.1  
 ip route 192.168.1.0 255.255.255.0 10.10.20.1  
