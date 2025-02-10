@@ -34,7 +34,7 @@ Feladat:
 | Router3 | GigabitEthernet0/1 | 192.168.3.1   | -                      |
 | Router3 | Serial0/0/1        | 10.10.20.2    | -                      |
 
-**PC-k konfigurálása** (Minden PC-n, a megfelelő adatokkal):
+**PC-k konfigurálása** (Minden PC-n, a megfelelő adatokkal):  
 IP Address: 192.168.X.Y  
 Subnet Mask: 255.255.255.0  
 Default Gateway: 192.168.X.1  
