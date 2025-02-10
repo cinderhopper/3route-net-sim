@@ -35,9 +35,9 @@ Feladat:
 | Router3 | Serial0/0/1        | 10.10.20.2    | -                      |
 
 **PC-k konfigurálása** (Minden PC-n, a megfelelő adatokkal):
-IP Address: 192.168.X.Y 
-Subnet Mask: 255.255.255.0 
-Default Gateway: 192.168.X.1
+IP Address: 192.168.X.Y  
+Subnet Mask: 255.255.255.0  
+Default Gateway: 192.168.X.1  
 
 ### **2) Alapkonfiguráció minden hálózati eszközre**
 
@@ -59,123 +59,123 @@ exit
 write memory  
 
 🔹 **R2 konfigurációja**
-enable
-configure terminal
-hostname R2
-interface GigabitEthernet0/1
-ip address 192.168.2.1 255.255.255.0
-no shutdown
-exit
-interface Serial0/0/0
-ip address 10.10.10.2 255.255.255.0
-no shutdown
-exit
-interface Serial0/0/1
-ip address 10.10.20.1 255.255.255.0
-no shutdown
-exit
-exit
-write memory
+enable  
+configure terminal  
+hostname R2  
+interface GigabitEthernet0/1  
+ip address 192.168.2.1 255.255.255.0  
+no shutdown  
+exit  
+interface Serial0/0/0  
+ip address 10.10.10.2 255.255.255.0  
+no shutdown  
+exit  
+interface Serial0/0/1  
+ip address 10.10.20.1 255.255.255.0  
+no shutdown  
+exit  
+exit  
+write memory  
 
 🔹 **R3 konfigurációja**
-enable
-configure terminal
-hostname R3
-interface GigabitEthernet0/1
-ip address 192.168.3.1 255.255.255.0
-no shutdown
-exit
-interface Serial0/0/1
-ip address 10.10.20.2 255.255.255.0
-no shutdown
-exit
-exit
-write memory
+enable  
+configure terminal  
+hostname R3  
+interface GigabitEthernet0/1  
+ip address 192.168.3.1 255.255.255.0  
+no shutdown  
+exit  
+interface Serial0/0/1  
+ip address 10.10.20.2 255.255.255.0  
+no shutdown  
+exit  
+exit  
+write memory  
 
 ### Switchek beállítása (S1, S2, S3)
 🔹 **S1 konfigurációja**
-enable
-configure terminal
-hostname S1
-interface Vlan1
-ip address 192.168.1.100 255.255.255.0
-no shutdown
-exit
-ip default-gateway 192.168.1.1
-exit
-write memory
+enable  
+configure terminal  
+hostname S1  
+interface Vlan1  
+ip address 192.168.1.100 255.255.255.0  
+no shutdown  
+exit  
+ip default-gateway 192.168.1.1  
+exit  
+write memory  
 
 🔹 **S2 konfigurációja**
-enable
-configure terminal
-hostname S2
-interface Vlan1
-ip address 192.168.2.100 255.255.255.0
-no shutdown
-exit
-ip default-gateway 192.168.2.1
-exit
-write memory
+enable  
+configure terminal  
+hostname S2  
+interface Vlan1  
+ip address 192.168.2.100 255.255.255.0  
+no shutdown  
+exit  
+ip default-gateway 192.168.2.1  
+exit  
+write memory  
 
 🔹 **S3 konfigurációja**
-enable
-configure terminal
-hostname S3
-interface Vlan1
-ip address 192.168.3.100 255.255.255.0
-no shutdown
-exit
-ip default-gateway 192.168.3.1
-exit
-write memory
+enable  
+configure terminal  
+hostname S3  
+interface Vlan1  
+ip address 192.168.3.100 255.255.255.0  
+no shutdown  
+exit  
+ip default-gateway 192.168.3.1  
+exit  
+write memory  
 
 ## **3) Statikus útvonalak beállítása**
 🔹 **R1-en**
-enable
-configure terminal
-ip route 192.168.2.0 255.255.255.0 10.10.10.2
-ip route 192.168.3.0 255.255.255.0 10.10.10.2
-exit
-write memory
+enable  
+configure terminal  
+ip route 192.168.2.0 255.255.255.0 10.10.10.2  
+ip route 192.168.3.0 255.255.255.0 10.10.10.2  
+exit  
+write memory  
 
 🔹 **R2-n 
-configure terminal 
-ip route 192.168.1.0 255.255.255.0 10.10.10.1 
-ip route 192.168.3.0 255.255.255.0 10.10.20.2 
-exit
-write memory
+configure terminal  
+ip route 192.168.1.0 255.255.255.0 10.10.10.1  
+ip route 192.168.3.0 255.255.255.0 10.10.20.2  
+exit  
+write memory  
 
 🔹 **R3-on**
-configure terminal
-ip route 192.168.2.0 255.255.255.0 10.10.20.1
-ip route 192.168.1.0 255.255.255.0 10.10.20.1
-exit
-write memory
+configure terminal  
+ip route 192.168.2.0 255.255.255.0 10.10.20.1  
+ip route 192.168.1.0 255.255.255.0 10.10.20.1  
+exit  
+write memory  
 
 
 ## **4) Távoli elérés beállítása Telnettel**
 
 🔹 **Minden routeren és switchen engedélyezni kell a Telnetet és beállítani az enable jelszót.**
-enable
-configure terminal
-line vty 0 4
-password cisco
-login
-exit
-enable secret adminpass
-exit
-write memory
+enable  
+configure terminal  
+line vty 0 4  
+password cisco  
+login  
+exit  
+enable secret adminpass  
+exit  
+write memory  
 
 ## **5) Tesztelés**
 
 🔹 **Pingelj egy másik alhálózatból lévő PC-t:**
 🔹 **Pingelj egy routert vagy egy switch VLAN1 interfészét:**
 🔹 **Teszteld a Telnetet egy PC-ről:**
-telnet 192.168.1.1  (Router R1)
-telnet 192.168.1.100 (Switch S1)
+telnet 192.168.1.1  (Router R1)  
+telnet 192.168.1.100 (Switch S1)  
 
-Bejelentkezés után:
-Password: cisco
-enable
-Password: adminpass
+Bejelentkezés után:  
+Password: cisco  
+enable  
+Password: adminpass  
 
