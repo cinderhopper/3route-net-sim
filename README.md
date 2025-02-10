@@ -1,4 +1,4 @@
-!![topology](PacketTracer_ETC8RTlAuy.png)
+![topology](PacketTracer_ETC8RTlAuy.png)
 Feladat:
 1) Adj IP címeket az eszközeidnek 
 2) Alapkonfig minden hálózati eszközre! 
