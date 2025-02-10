@@ -44,19 +44,19 @@ Default Gateway: 192.168.X.1
 ### Routerek beállítása (R1, R2, R3)
 
 🔹 **R1 konfigurációja**
-enable
-configure terminal
-hostname R1
-interface GigabitEthernet0/1
-ip address 192.168.1.1 255.255.255.0
-no shutdown
-exit
-interface Serial0/0/0
-ip address 10.10.10.1 255.255.255.0
-no shutdown
-exit
-exit
-write memory
+enable  
+configure terminal  
+hostname R1  
+interface GigabitEthernet0/1  
+ip address 192.168.1.1 255.255.255.0  
+no shutdown  
+exit  
+interface Serial0/0/0  
+ip address 10.10.10.1 255.255.255.0  
+no shutdown  
+exit  
+exit  
+write memory  
 
 🔹 **R2 konfigurációja**
 enable
